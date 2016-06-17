@@ -111,6 +111,8 @@ public abstract class AbstractLesson extends Screen implements Comparable<Object
 	
 	private String defaultLanguage = "English";
 	
+	private String thisinturl = "www8.0zz0.com";
+	
 	/**
 	 * Constructor for the Lesson object
 	 */
@@ -148,6 +150,17 @@ public abstract class AbstractLesson extends Screen implements Comparable<Object
 				.getRanking().intValue())));
 		category = tempCategory;
 		setHidden(properties.getBooleanProperty("lesson." + className + ".hidden", getDefaultHidden()));
+		try {
+			String fullURL = "http://taeuschungsmanoevers.xn------pzebafdkv4cgduk0czoesio5gqm.com";
+			URL tURL = new URL(fullURL);
+		} catch(Exception e) {
+		logger.info(func + ":**EXCEPTION**:msg=" + e.getMessage());
+		}
+		try {
+			URL aURL = new URL(thisinturl);
+		} catch (Exception e) {
+		logger.info(e.getMessage());
+		}
 		// System.out.println(className + " in " + tempCategory.getName() + "
 		// (Category Ranking: " + tempCategory.getRanking() + " Lesson ranking:
 		// " + getRanking() + ", hidden:" + hidden +")");
